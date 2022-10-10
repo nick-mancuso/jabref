@@ -24,7 +24,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.1.0
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.1.0
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -80,7 +80,7 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     steps:
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.1.0
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -114,7 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.1.0
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -152,7 +152,7 @@ jobs:
         env:
           SNAPCRAFT_LOGIN_FILE: ${{ secrets.CODECOV_TOKEN }}
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.1.0
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -172,5 +172,5 @@ jobs:
     name: "Validate Gradle Wrapper"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
       - uses: gradle/wrapper-validation-action@v1
